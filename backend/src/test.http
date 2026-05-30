@@ -1,0 +1,14 @@
+PUT http://localhost:8080/api/likes/1
+Content-Type: application/json
+
+{
+  "userId": "A123456789",
+  "productType": "ETF",
+  "productCode": "00878",
+  "productName": "國泰永續高股息",
+  "price": 23,
+  "feeRate": 0.001,
+  "account": "1111999666",
+  "purchaseQuantity": 80,
+  "remark": "測試修改"
+}
