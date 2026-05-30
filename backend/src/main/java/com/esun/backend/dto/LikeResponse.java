@@ -1,6 +1,7 @@
 package com.esun.backend.dto;
 
 import java.math.BigDecimal;
+import java.sql.Timestamp;
 
 // 查詢喜好商品清單時回傳給前端的資料格式
 public class LikeResponse {
@@ -15,7 +16,6 @@ public class LikeResponse {
     private String email;
 
     // 商品資料
-
     // 商品流水號
     private Integer productNo;
 
@@ -39,6 +39,9 @@ public class LikeResponse {
     // 使用者備註
     private String remark;
 
+    // 建立日期
+    private Timestamp createdAt;
+
     // 將查詢到的資料放入欄位
     public LikeResponse(
             Integer sn,
@@ -53,7 +56,8 @@ public class LikeResponse {
             String account,
             BigDecimal totalFee,
             BigDecimal totalAmount,
-            String remark
+            String remark,
+            Timestamp createdAt
     ) {
         this.sn = sn;
         this.userId = userId;
@@ -68,6 +72,7 @@ public class LikeResponse {
         this.totalFee = totalFee;
         this.totalAmount = totalAmount;
         this.remark = remark;
+        this.createdAt = createdAt;
     }
 
 
@@ -110,4 +115,6 @@ public class LikeResponse {
     public BigDecimal getTotalAmount() {  return totalAmount;  }
 
     public String getRemark() {  return remark;  }
+
+    public Timestamp getCreatedAt() { return createdAt; }
 }

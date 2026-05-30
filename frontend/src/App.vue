@@ -23,6 +23,17 @@ const filteredLikes = computed(() => {
   )
 })
 
+// 計算目前喜好清單的預計花費總金額
+const totalInvestment = computed(() => {
+
+  return filteredLikes.value.reduce(
+      (sum, item) =>
+          sum + Number(item.totalAmount),
+      0
+  )
+      .toFixed(2)
+})
+
 // 記錄目前修改中商品的流水號
 const editingSn = ref(null)
 
@@ -44,6 +55,13 @@ const form = ref({
   // 備註
   remark: ''
 })
+
+function formatDate(dateString) {
+
+  if (!dateString) return ''
+
+  return dateString.replace('T', ' ').substring(0, 19)
+}
 
 // 呼叫後端 API 查詢商品清單
 async function loadProducts() {
@@ -291,6 +309,10 @@ onMounted(() => {
         placeholder="輸入商品代碼或商品名稱進行查詢"
     >
 
+    <p>
+      目前清單總金額：{{ totalInvestment }} 元
+    </p>
+
     <table border="1">
 
       <thead>
@@ -304,6 +326,7 @@ onMounted(() => {
         <th>總手續費</th>
         <th>總金額</th>
         <th>備註</th>
+        <th>加入日期時間</th>
         <th>操作</th>
       </tr>
       </thead>
@@ -322,6 +345,7 @@ onMounted(() => {
         <td>{{ item.totalFee }}</td>
         <td>{{ item.totalAmount }}</td>
         <td>{{ item.remark }}</td>
+        <td>{{ formatDate(item.createdAt) }}</td>
 
         <td>
           <button @click="editLike(item)">

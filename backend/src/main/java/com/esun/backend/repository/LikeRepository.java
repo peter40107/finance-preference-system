@@ -41,7 +41,8 @@ public class LikeRepository {
                         rs.getString("account"),
                         rs.getBigDecimal("total_fee"),
                         rs.getBigDecimal("total_amount"),
-                        rs.getString("remark")
+                        rs.getString("remark"),
+                        rs.getTimestamp("created_at")
                 )
         );
     }
