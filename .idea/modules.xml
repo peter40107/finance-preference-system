@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/finance-preference-system.iml" filepath="$PROJECT_DIR$/.idea/finance-preference-system.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.gitignore/.idea/finance-preference-system.iml" filepath="$PROJECT_DIR$/.gitignore/.idea/finance-preference-system.iml" />
     </modules>
   </component>
 </project>
