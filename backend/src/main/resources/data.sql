@@ -11,7 +11,7 @@ VALUES (
            '許小偉',
            'peter40107@gmail.com',
            '00001234567890',
-           '喜歡穩定投資 ETF '
+           '喜歡長期穩定投資 ETF '
        );
 
 -- 商品測試資料
@@ -55,7 +55,7 @@ INSERT INTO products (
 VALUES ('ETF',
         '00878',
         '國泰永續高股息',
-        21.50,
+        30.76,
         0.010);
 
 INSERT INTO products (
@@ -65,10 +65,10 @@ INSERT INTO products (
     price,
     fee_rate
 )
-VALUES ('ETF',
-        '00919',
-        '群益台灣精選高息',
-        24.80,
+VALUES ('個股',
+        '2884',
+        '玉山金',
+        30.95,
         0.0010);
 
 INSERT INTO products (
@@ -78,10 +78,10 @@ INSERT INTO products (
     price,
     fee_rate
 )
-VALUES ('ETF',
-        '006208',
-        '富邦台50',
-        108.00,
+VALUES ('個股',
+        '2330',
+        '台積電',
+        2330.00,
         0.0050);
 
 INSERT INTO products (
@@ -91,10 +91,10 @@ INSERT INTO products (
     price,
     fee_rate
 )
-VALUES ('基金',
-        'F001',
-        '全球科技基金',
-        50.00,
+VALUES ('個股',
+        '2454',
+        '聯發科',
+        4310.00,
         0.0150);
 
 INSERT INTO products (
@@ -107,7 +107,7 @@ INSERT INTO products (
 VALUES ('基金',
         'F002',
         '美國成長基金',
-        65.00,
+        8402.33,
         0.0130);
 
 INSERT INTO products (
@@ -118,9 +118,9 @@ INSERT INTO products (
     fee_rate
 )
 VALUES ('基金',
-        'F003',
+        'F018',
         '亞洲收益基金',
-        38.00,
+        8080.17,
         0.0120);
 
 INSERT INTO products (
@@ -131,9 +131,9 @@ INSERT INTO products (
     fee_rate
 )
 VALUES ('債券',
-        'B001',
-        '美國公債ETF',
-        42.00,
+        'TLT',
+        '長期美國公債ETF',
+        2721.96,
         0.0008);
 
 INSERT INTO products (
@@ -144,9 +144,9 @@ INSERT INTO products (
     fee_rate
 )
 VALUES ('債券',
-        'B002',
-        '投資級公司債ETF',
-        36.00,
+        'IEF',
+        '中期美國公債ETF',
+        3000.10,
         0.0009);
 
 -- 喜好清單測試資料

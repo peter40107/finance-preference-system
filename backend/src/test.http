@@ -8,7 +8,7 @@ Content-Type: application/json
   "productName": "國泰永續高股息",
   "price": 23,
   "feeRate": 0.001,
-  "account": "1111999666",
+  "account": 00001234567890,
   "purchaseQuantity": 80,
   "remark": "測試修改"
 }
